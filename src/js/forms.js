@@ -194,8 +194,8 @@ loginForm.addEventListener('submit', (e) => {
   isValid = true;
   e.preventDefault();
   checkRequired([loginUsername, loginPassword]);
-  checkLength(loginUsername, 5, 15);
-  checkLength(loginPassword, 8, 25);
+  checkLength(loginUsername, 5, 50);
+  checkLength(loginPassword, 8, 50);
   formSendResult(isValid, `${isValid ? 'Zalogowano' : 'Wystąpił błąd'}`);
 });
 
@@ -209,9 +209,9 @@ registerForm.addEventListener('submit', (e) => {
     registerName,
     registerCheckbox,
   ]);
-  checkLength(registerUsername, 5, 15);
+  checkLength(registerUsername, 5, 50);
   checkLength(registerName, 5, 100);
-  checkLength(registerPassword, 8, 25);
+  checkLength(registerPassword, 8, 50);
   checkEmail(registerEmail);
   formSendResult(
     isValid,
