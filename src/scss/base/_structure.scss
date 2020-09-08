@@ -4,7 +4,7 @@ body {
   font-family: $font-default;
 }
 
-.hero {
+.s__hero {
   max-width: 80.5625rem;
   margin: 0 auto;
 }
@@ -32,7 +32,7 @@ body {
   .page-container {
     padding: 0 1rem;
   }
-  .hero {
+  .s__hero {
     display: grid;
     grid-template-columns: 48.64% 51.36%;
     border-radius: 20px;
