@@ -11,7 +11,7 @@ import './forms';
 
 const siteButtons = document.querySelectorAll('button, .navigation__link');
 
-((e) => {
+const keyPress = (e) => {
   e = e || window.event;
   if (e.keyCode == 13) {
     siteButtons.forEach((button) => {
@@ -20,4 +20,6 @@ const siteButtons = document.querySelectorAll('button, .navigation__link');
     });
   }
   return true;
-})();
+};
+
+document.addEventListener('DOMContentLoaded', keyPress);
