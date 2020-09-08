@@ -1,0 +1,65 @@
+.floating-label {
+  position: relative;
+  width: 18.75rem;
+  margin-bottom: 1.875rem;
+  input {
+    font-family: $font-default;
+    border: solid 1px $color_gray;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    outline: 0;
+    height: 3.125rem;
+    width: 100%;
+    padding: 0 1.25rem 0 1.0625rem;
+  }
+
+  label {
+    color: $color_gray;
+    font-weight: 300;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+    background-color: #fff;
+    padding: 0 0.5rem;
+  }
+
+  &.-expand {
+    input {
+      border-color: $color_orange;
+    }
+    label {
+      top: 0;
+    }
+  }
+}
+
+.floating-label,
+.checkbox-container {
+  &.error small {
+    display: block;
+  }
+}
+
+small {
+  display: none;
+  color: $color_red;
+  font-family: 'Khula', sans-serif;
+  font-size: 0.75rem;
+  position: absolute;
+  left: 1.25rem;
+  bottom: -1.15rem;
+}
+
+.checkbox-container small {
+  left: 1.9rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px $white inset;
+}

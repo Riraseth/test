@@ -1,0 +1,12 @@
+.notice {
+  position: fixed;
+  right: 2rem;
+  bottom: -20rem;
+  max-width: 15rem;
+  color: $white;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  &.-active {
+    bottom: 2rem;
+  }
+}

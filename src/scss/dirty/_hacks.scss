@@ -1,0 +1,27 @@
+/**
+ * Dirty hacks, yes internet explorer, we are looking at you
+*/
+
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
+  .hero {
+    display: block;
+  }
+  .s__user {
+    min-height: 42.5rem;
+    padding-top: 3rem;
+  }
+  .s__news {
+    .news__grid {
+      display: block;
+    }
+    .news__item {
+      width: 50% !important;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        height: 18rem;
+      }
+    }
+  }
+}

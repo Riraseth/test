@@ -1,0 +1,48 @@
+body {
+  background: $color_light-blue;
+  color: $color_default;
+  font-family: $font-default;
+}
+
+.hero {
+  max-width: 80.5625rem;
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width: 122rem;
+  width: 100%;
+  margin: 3.4375rem auto 0 auto;
+  position: relative;
+}
+
+.medium-container {
+  max-width: 66.75rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.small-container {
+  max-width: 63.25rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include bp(large) {
+  .page-container {
+    padding: 0 1rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 48.64% 51.36%;
+    border-radius: 20px;
+    min-height: 42.5rem;
+    overflow: hidden;
+  }
+}
+
+@include bp(small) {
+  .page-container {
+    margin: 0 auto;
+  }
+}

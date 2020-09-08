@@ -1,0 +1,57 @@
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+/* Structure */
+@import 'base/structure';
+
+/* Fonts */
+@import 'base/fonts';
+
+/* Browser specific styles */
+@import 'dirty/hacks';
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Typography */
+
+@import 'base/typography';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/links';
+@import 'components/inputs';
+@import 'components/switch';
+@import 'components/checkbox';
+@import 'components/notice';
+@import 'components/hamburger';
+/* Sections */
+.s__header {
+  @import 'sections/header';
+}
+
+.s__slider {
+  @import 'sections/slider';
+}
+
+.s__user {
+  @import 'sections/user';
+}
+
+.s__news {
+  @import 'sections/news';
+}
+
+.s__technology {
+  @import 'sections/technology';
+}
+
+.s__footer {
+  @import 'sections/footer';
+}

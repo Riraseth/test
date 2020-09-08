@@ -1,0 +1,42 @@
+.hamburger-container {
+  .hamburger {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: 1rem;
+      height: 2px;
+      background-color: $color_default;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.25rem;
+    }
+    &::after {
+      top: 0.25rem;
+    }
+    &.active {
+      background-color: transparent;
+    }
+
+    &.active::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &.active::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+}

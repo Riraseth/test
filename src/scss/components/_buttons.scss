@@ -1,0 +1,30 @@
+.btn {
+  font-family: $font-default;
+  font-size: 1rem;
+  width: 14.375rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  line-height: 1.375;
+  transition: all 0.3s ease;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+  &--orange {
+    background-color: $color_orange;
+    border: 1px solid $color_orange;
+    color: $white;
+    &:hover {
+      background-color: $color_dark-orange;
+      border: 1px solid $color_dark-orange;
+    }
+  }
+  &--white {
+    background-color: $white;
+    border: 1px solid $color_orange;
+    color: $color_orange;
+    &:hover {
+      background-color: $color_orange;
+      color: $white;
+    }
+  }
+}
