@@ -29,5 +29,7 @@
   background-color: $color_orange;
 }
 .user__checkbox {
-  display: none;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
 }

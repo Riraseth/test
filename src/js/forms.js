@@ -122,36 +122,72 @@ const showPassword = () => {
   }
 };
 
+const toggleForms = (inputArr1, inputArr2) => {
+  if (inputArr1) {
+    inputArr1.querySelectorAll('input, button, p').forEach((input) => {
+      input.setAttribute('tabIndex', '0');
+    });
+  }
+  if (inputArr2) {
+    inputArr2.querySelectorAll('input, button, p').forEach((input) => {
+      input.setAttribute('tabIndex', '-1');
+    });
+  }
+};
+
+const formsInit = () => {
+  toggleForms(welcomeScreen, null);
+  toggleForms(null, loginScreen);
+  toggleForms(null, registerScreen);
+};
+
+formsInit();
+
 // Event listeners
+
+// Dzień dobry
 welcomeButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     welcomeScreen.classList.add('hidden');
+    // welcomeScreen.querySelectorAll('*').forEach((item) => {
+    //   item.setAttribute('tabIndex', '-1');
+    // });
+    toggleForms(null, welcomeScreen);
     if (e.target.id === 'choose-login') {
       loginScreen.classList.remove('hidden');
+      toggleForms(loginScreen, registerScreen);
     }
     if (e.target.id === 'choose-register') {
       registerScreen.classList.remove('hidden');
+      toggleForms(registerScreen, loginScreen);
     }
   });
 });
+
+const clearLabels = () => {
+  floatingLabels.forEach((label) => {
+    label.querySelector('input').value = '';
+  });
+};
+
+// Go to register
 
 noAccount.addEventListener('click', () => {
   loginScreen.classList.add('hidden');
   registerScreen.classList.remove('hidden');
-  floatingLabels.forEach((label) => {
-    label.className = 'floating-label';
-    label.querySelector('input').value = '';
-  });
+  toggleForms(registerScreen, loginScreen);
+  clearLabels();
+  loginCheckbox.checked = false;
 });
+
+// go to login
 
 wantToLogin.addEventListener('click', () => {
   registerScreen.classList.add('hidden');
   loginScreen.classList.remove('hidden');
-  floatingLabels.forEach((label) => {
-    label.className = 'floating-label';
-    label.querySelector('input').value = '';
-  });
-  registerCheckbox.parentElement.className = 'checkbox-container';
+  toggleForms(loginScreen, registerScreen);
+  clearLabels();
+  registerCheckbox.checked = false;
 });
 
 loginForm.addEventListener('submit', (e) => {

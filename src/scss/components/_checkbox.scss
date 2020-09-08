@@ -1,4 +1,3 @@
-/* The checkbox-container */
 .checkbox-container {
   font-size: 0.875rem;
   line-height: 1.1875rem;
@@ -11,7 +10,9 @@
 }
 
 .checkbox-container input {
-  display: none;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
 }
 
 .custom-checkmark {

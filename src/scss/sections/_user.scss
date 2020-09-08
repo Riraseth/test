@@ -79,10 +79,7 @@
     background-color: $white;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.07);
   }
-  .hidden {
-    position: absolute !important;
-    left: 3000px !important;
-  }
+
   .user__welcome,
   .user__login,
   .user__register {
@@ -90,6 +87,10 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    &.hidden {
+      position: absolute;
+      left: 3000px;
+    }
   }
 }
 

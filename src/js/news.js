@@ -21,10 +21,11 @@ const getNews = async () => {
 
 const showNews = async () => {
   const news = await getNews();
-  news.forEach((news) => {
+  news.forEach((news, i) => {
     const date = format(news.date, dateFormat);
     const newsEl = document.createElement('article');
     newsEl.classList.add('news__item');
+    newsEl.setAttribute('tabIndex', '0');
     newsEl.innerHTML = `
     <div class="news__header">
     <h2 class="news__quote">
